@@ -25,3 +25,30 @@ C:\Users\Mariusz\Documents\Visual Studio 2013\Projects\Janek\Janek\bin\Debug\ja\
 C:\Users\Mariusz\Documents\Visual Studio 2013\Projects\Janek\Janek\bin\Debug\ko\System.Windows.Interactivity.resources.dll
 C:\Users\Mariusz\Documents\Visual Studio 2013\Projects\Janek\Janek\bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
 C:\Users\Mariusz\Documents\Visual Studio 2013\Projects\Janek\Janek\bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
+C:\Users\Mariusz\Documents\GitHub\WPF_Test\Janek\Janek\bin\Debug\Janek.exe.config
+C:\Users\Mariusz\Documents\GitHub\WPF_Test\Janek\Janek\obj\Debug\Janek.exe
+C:\Users\Mariusz\Documents\GitHub\WPF_Test\Janek\Janek\obj\Debug\Janek.pdb
+C:\Users\Mariusz\Documents\GitHub\WPF_Test\Janek\Janek\bin\Debug\Janek.exe
+C:\Users\Mariusz\Documents\GitHub\WPF_Test\Janek\Janek\bin\Debug\Janek.pdb
+C:\Users\Mariusz\Documents\GitHub\WPF_Test\Janek\Janek\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\Mariusz\Documents\GitHub\WPF_Test\Janek\Janek\bin\Debug\System.Windows.Interactivity.xml
+C:\Users\Mariusz\Documents\GitHub\WPF_Test\Janek\Janek\bin\Debug\de\System.Windows.Interactivity.resources.dll
+C:\Users\Mariusz\Documents\GitHub\WPF_Test\Janek\Janek\bin\Debug\en\System.Windows.Interactivity.resources.dll
+C:\Users\Mariusz\Documents\GitHub\WPF_Test\Janek\Janek\bin\Debug\es\System.Windows.Interactivity.resources.dll
+C:\Users\Mariusz\Documents\GitHub\WPF_Test\Janek\Janek\bin\Debug\fr\System.Windows.Interactivity.resources.dll
+C:\Users\Mariusz\Documents\GitHub\WPF_Test\Janek\Janek\bin\Debug\it\System.Windows.Interactivity.resources.dll
+C:\Users\Mariusz\Documents\GitHub\WPF_Test\Janek\Janek\bin\Debug\ja\System.Windows.Interactivity.resources.dll
+C:\Users\Mariusz\Documents\GitHub\WPF_Test\Janek\Janek\bin\Debug\ko\System.Windows.Interactivity.resources.dll
+C:\Users\Mariusz\Documents\GitHub\WPF_Test\Janek\Janek\bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
+C:\Users\Mariusz\Documents\GitHub\WPF_Test\Janek\Janek\bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
+C:\Users\Mariusz\Documents\GitHub\WPF_Test\Janek\Janek\obj\Debug\Janek.csprojResolveAssemblyReference.cache
+C:\Users\Mariusz\Documents\GitHub\WPF_Test\Janek\Janek\obj\Debug\Style\Style.baml
+C:\Users\Mariusz\Documents\GitHub\WPF_Test\Janek\Janek\obj\Debug\View\MainWindow.g.cs
+C:\Users\Mariusz\Documents\GitHub\WPF_Test\Janek\Janek\obj\Debug\App.g.cs
+C:\Users\Mariusz\Documents\GitHub\WPF_Test\Janek\Janek\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Mariusz\Documents\GitHub\WPF_Test\Janek\Janek\obj\Debug\Janek_MarkupCompile.cache
+C:\Users\Mariusz\Documents\GitHub\WPF_Test\Janek\Janek\obj\Debug\Janek_MarkupCompile.lref
+C:\Users\Mariusz\Documents\GitHub\WPF_Test\Janek\Janek\obj\Debug\View\MainWindow.baml
+C:\Users\Mariusz\Documents\GitHub\WPF_Test\Janek\Janek\obj\Debug\Janek.g.resources
+C:\Users\Mariusz\Documents\GitHub\WPF_Test\Janek\Janek\obj\Debug\Janek.Properties.Resources.resources
+C:\Users\Mariusz\Documents\GitHub\WPF_Test\Janek\Janek\obj\Debug\Janek.csproj.GenerateResource.Cache
