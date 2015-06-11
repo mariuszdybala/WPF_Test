@@ -1,0 +1,105 @@
+﻿<Window x:Class="Janek.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:i="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:int="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:tools="clr-namespace:Janek.Tools"
+        xmlns:properties ="clr-namespace:Janek.Properties"
+        xmlns:janek="clr-namespace:Janek"
+        
+        Title="MainWindow" Height="550" Width="525">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Style/Style.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+            <tools:HeightConverter x:Key="HC"/>
+            <DataTemplate x:Key="ListTemplate" DataType="TextBlock">
+                <!--<TextBlock Text="{Binding}"></TextBlock>-->
+                <TextBlock>
+                <Run Text="{Binding Meat}" Foreground="BlueViolet"></Run>
+                </TextBlock>
+            </DataTemplate>
+        </ResourceDictionary>   
+    </Window.Resources>
+    
+    <Grid Background="LightBlue">
+        <Grid.RowDefinitions>
+            <RowDefinition Height ="50">                
+            </RowDefinition>
+            <RowDefinition Height ="*"></RowDefinition>
+            <RowDefinition Height ="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="100"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Row="0" Grid.ColumnSpan="2" Background="Pink">
+            <TextBlock Text="Witamy u Niechlujenego Janka" Style="{StaticResource TextBoxHeader}"></TextBlock>
+        </Grid>    
+            <StackPanel Grid.Row="1" Grid.ColumnSpan="2" x:Name="pageLayoutStackPanel" Margin="20,0">
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                    <StackPanel Margin="0,0,20,0">
+                        <TextBlock Text="Wielkość menu"></TextBlock>
+                        <TextBox HorizontalAlignment="Left" Text="{Binding NumberOfItems, Mode=TwoWay}" Width="82" Visibility="Visible"/>
+                        
+                    </StackPanel>
+                    <Button Name="generujMenu" Width="100" Height="20"  Content="Wygeneruj Menu" Margin="0,0,20,0" >
+                        <int:Interaction.Triggers>
+                            <int:EventTrigger EventName="Click">
+                                <int:InvokeCommandAction Command="{Binding buttonClickCommand}" 
+                                                         CommandParameter="{Binding ElementName=generujMenu, Path=Height}"/>
+                            </int:EventTrigger>
+                        </int:Interaction.Triggers>
+                        
+                    </Button>
+                </StackPanel>
+                <StackPanel Grid.ColumnSpan="2">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="425"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <ListView Grid.Column="0"  ItemsSource="{Binding Menu}" Margin="0,10,100,0" Height="124" SelectedItem="{Binding SelectedMeal}">
+                            <int:Interaction.Triggers>
+                                <int:EventTrigger EventName="SelectionChanged">
+                                    <int:InvokeCommandAction Command="{Binding SelectionChangedCommand}"></int:InvokeCommandAction>
+                                </int:EventTrigger>
+                            </int:Interaction.Triggers>
+                        </ListView>
+                        <Border Grid.Column="1" 
+                               CornerRadius="180"
+                                BorderBrush="Black"
+                                BorderThickness="1"
+                               
+                               Height="{Binding RelativeSource={RelativeSource Self}, Path=ActualWidth}"  
+                                Width="{Binding bubbleHeight, Converter={StaticResource HC}, ConverterParameter={RelativeSource Self}}">
+                        </Border>
+                    </Grid>
+                </StackPanel>
+                <TextBlock Text="{Binding GeneratedDate}"></TextBlock>
+
+        </StackPanel>
+        <StackPanel Grid.Row="2" Grid.ColumnSpan="2">
+            <TextBlock Text="{x:Static properties:Resources.Dupa}"></TextBlock>
+            <TextBox HorizontalAlignment="Left" Text="{Binding TextToValidate, Mode=TwoWay}" Width="82" Visibility="Visible"/>
+            <ListBox ItemsSource="{Binding TheList}" x:Name="ListaKierunkow">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <CheckBox Tag="{Binding TheValue}" Content="{Binding TheText}" >
+                       <int:Interaction.Triggers>
+                            <int:EventTrigger EventName="Checked">
+                                    <int:InvokeCommandAction Command="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}, Path=DataContext.CheckedCommand}" CommandParameter="{Binding ElementName=ListaKierunkow}" ></int:InvokeCommandAction>
+                          </int:EventTrigger>
+                          </int:Interaction.Triggers>
+                        </CheckBox>
+                    </DataTemplate>
+                    
+                </ListBox.ItemTemplate>
+
+            </ListBox>
+        </StackPanel>
+
+    </Grid>
+</Window>
