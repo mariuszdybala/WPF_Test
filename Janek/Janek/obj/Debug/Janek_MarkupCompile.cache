@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Mariusz\Documents\GitHub\WPF_Test\Janek\Janek\App.xaml
-2-1712066436
+41928485163
 
-10-1127552084
+12-264956972
 13-1386834324
-View\MainWindow.xaml;Style\Style.xaml;
+Animation\Block.xaml;Animation\LoadingAnimation.xaml;View\MainWindow.xaml;Style\Style.xaml;
 
-False
+True
 

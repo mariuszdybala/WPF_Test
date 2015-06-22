@@ -8,6 +8,7 @@ using System.ComponentModel;
 using Janek.Tools;
 using System.Windows.Input;
 using Janek.Model;
+using System.Windows;
 
 namespace Janek
 {
@@ -16,7 +17,7 @@ namespace Janek
       public ICommand buttonClickCommand { get; set; }
       public ICommand SelectionChangedCommand { get; set; }
       public ICommand CheckedCommand { get; set; }
-
+      public ICommand buttonStartAnimationsCommand { get; set; }
 
         private Random random = new Random();
         private List<String> meats = new List<string>() { "Pieczona wołowina", "Salami", "Indyk", "Szynka", "Karkówka" };
@@ -33,6 +34,19 @@ namespace Janek
 
         private int bubbleHeight = 50;
         public int BubbleHeight { get { return bubbleHeight; } set { } }
+
+       static Visibility animationsEnabled = Visibility.Collapsed;
+       static public Visibility AnimationsEnabled 
+         {
+             set
+             {
+                 animationsEnabled = value;
+                 OnPropertyCheanged("AnimationsEnabled");}
+             get { return animationsEnabled; }
+         }
+
+
+
 
         public string SelectedMeal { get; set; }
 
@@ -60,11 +74,20 @@ namespace Janek
             buttonClickCommand = new MyCommand(view_buttonClickCommand);
             SelectionChangedCommand = new MyCommand(view_SelectionChangedCommand);
             CheckedCommand = new MyCommand(view_CheckedCommand);
+            buttonStartAnimationsCommand = new MyCommand(buttonStartAnimations);
             Menu = new ObservableCollection<MenuItem>();
             CreateCheckBoxList();
             NumberOfItems = 10;
             TextToValidate = "dupa";
             UpdateMenu();
+        }
+
+        private void buttonStartAnimations(object obj)
+        {
+            if (AnimationsEnabled == Visibility.Collapsed)
+                AnimationsEnabled = Visibility.Visible;
+            else
+                AnimationsEnabled = Visibility.Collapsed;
         }
 
         private void view_CheckedCommand(object obj)
@@ -120,5 +143,6 @@ namespace Janek
             TheList.Add(new BoolStringClass { TheText = "NORTH", TheValue = 3 });
             TheList.Add(new BoolStringClass { TheText = "SOUTH", TheValue = 4 });
         }
+
     }
 }

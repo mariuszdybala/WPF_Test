@@ -6,6 +6,7 @@
         xmlns:tools="clr-namespace:Janek.Tools"
         xmlns:properties ="clr-namespace:Janek.Properties"
         xmlns:janek="clr-namespace:Janek"
+        xmlns:animation="clr-namespace:Janek.Animation"
         
         Title="MainWindow" Height="550" Width="525">
     <Window.Resources>
@@ -103,8 +104,15 @@
             </Border>
             
             <TextBlock Style="{StaticResource TextBoxHeader}">TEKST</TextBlock>
-            
-            
+            <animation:LoadingAnimation Visibility="{Binding AnimationsEnabled}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Button Name="StartAnimation" Width="100" Height="20"  Content="Wygeneruj Menu" Margin="0,0,20,0" >
+                <int:Interaction.Triggers>
+                    <int:EventTrigger EventName="Click">
+                        <int:InvokeCommandAction Command="{Binding buttonStartAnimationsCommand}" 
+                                                         />
+                    </int:EventTrigger>
+                </int:Interaction.Triggers>
+            </Button>
             <!--<TextBlock Text="Test"
                Height="40"
                Width="40"

@@ -52,3 +52,7 @@ C:\Users\Mariusz\Documents\GitHub\WPF_Test\Janek\Janek\obj\Debug\View\MainWindow
 C:\Users\Mariusz\Documents\GitHub\WPF_Test\Janek\Janek\obj\Debug\Janek.g.resources
 C:\Users\Mariusz\Documents\GitHub\WPF_Test\Janek\Janek\obj\Debug\Janek.Properties.Resources.resources
 C:\Users\Mariusz\Documents\GitHub\WPF_Test\Janek\Janek\obj\Debug\Janek.csproj.GenerateResource.Cache
+C:\Users\Mariusz\Documents\GitHub\WPF_Test\Janek\Janek\obj\Debug\Animation\Block.baml
+C:\Users\Mariusz\Documents\GitHub\WPF_Test\Janek\Janek\obj\Debug\Animation\Block.g.cs
+C:\Users\Mariusz\Documents\GitHub\WPF_Test\Janek\Janek\obj\Debug\Animation\LoadingAnimation.g.cs
+C:\Users\Mariusz\Documents\GitHub\WPF_Test\Janek\Janek\obj\Debug\Animation\LoadingAnimation.baml
