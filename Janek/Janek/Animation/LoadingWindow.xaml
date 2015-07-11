@@ -1,0 +1,16 @@
+﻿<Window x:Class="Janek.Animation.LoadingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:animation="clr-namespace:Janek.Animation"
+        MaxHeight="88" MaxWidth="88" Height="88" Width="88" 
+         AllowsTransparency="True" 
+        WindowStyle="None" 
+        Opacity="10" 
+        Background="Transparent" 
+        ResizeMode="NoResize" 
+        ShowInTaskbar="False" 
+        WindowStartupLocation="CenterScreen" Topmost="True">
+    <Border Background="Transparent" Height="88" Width="88" Opacity="10" CornerRadius="50" >
+        <animation:LoadingAnimation  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    </Border>
+</Window>

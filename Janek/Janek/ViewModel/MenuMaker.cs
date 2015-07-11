@@ -9,10 +9,14 @@ using Janek.Tools;
 using System.Windows.Input;
 using Janek.Model;
 using System.Windows;
+using Janek.Animation;
+//using System.Threading;
+using System.Windows.Threading;
+using System.Threading;
 
 namespace Janek
 {
-    class MenuMaker:INotifyPropertyChanged
+    class MenuMaker:INotifyPropertyChanged, IEnabled
     {
       public ICommand buttonClickCommand { get; set; }
       public ICommand SelectionChangedCommand { get; set; }
@@ -35,8 +39,8 @@ namespace Janek
         private int bubbleHeight = 50;
         public int BubbleHeight { get { return bubbleHeight; } set { } }
 
-       static Visibility animationsEnabled = Visibility.Collapsed;
-       static public Visibility AnimationsEnabled 
+        Visibility animationsEnabled = Visibility.Collapsed;
+        public Visibility AnimationsEnabled 
          {
              set
              {
@@ -45,7 +49,27 @@ namespace Janek
              get { return animationsEnabled; }
          }
 
+        bool setEnableWindow = true;
+        public bool SetEnableWindow
+        {
+            set
+            {
+                setEnableWindow = value;
+                OnPropertyCheanged("SetEnableWindow");
+            }
+            get { return setEnableWindow; }
+        }
 
+        string readyText = "";
+        public string ReadyText
+        {
+            set
+            {
+                readyText = value;
+                OnPropertyCheanged("ReadyText");
+            }
+            get { return readyText; }
+        }
 
 
         public string SelectedMeal { get; set; }
@@ -84,10 +108,8 @@ namespace Janek
 
         private void buttonStartAnimations(object obj)
         {
-            if (AnimationsEnabled == Visibility.Collapsed)
-                AnimationsEnabled = Visibility.Visible;
-            else
-                AnimationsEnabled = Visibility.Collapsed;
+            Start();
+          
         }
 
         private void view_CheckedCommand(object obj)
@@ -142,6 +164,32 @@ namespace Janek
             TheList.Add(new BoolStringClass { TheText = "WEST", TheValue = 2 });
             TheList.Add(new BoolStringClass { TheText = "NORTH", TheValue = 3 });
             TheList.Add(new BoolStringClass { TheText = "SOUTH", TheValue = 4 });
+        }
+
+        //LoadingWindow loading = new LoadingWindow();
+
+        BackgroundWorker loading = new BackgroundWorker();
+
+        SplashScreenWindow splash = new SplashScreenWindow();
+       
+
+        public void Start()
+        {
+            splash.StartMethod(this, MainThreadMethod);
+        }
+
+      
+
+        public void MainThreadMethod()
+        { 
+           
+
+        for (int i = 0; i < 5; i++)
+			{
+			Thread.Sleep(1000);
+			}
+        ReadyText = "OK, Zrobione";
+        
         }
 
     }

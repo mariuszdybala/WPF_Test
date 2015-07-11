@@ -6,9 +6,8 @@
         xmlns:tools="clr-namespace:Janek.Tools"
         xmlns:properties ="clr-namespace:Janek.Properties"
         xmlns:janek="clr-namespace:Janek"
-        xmlns:animation="clr-namespace:Janek.Animation"
         
-        Title="MainWindow" Height="550" Width="525">
+        Title="MainWindow" Height="550" Width="525" IsEnabled="{Binding SetEnableWindow}">
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -103,9 +102,8 @@
                 </Viewbox>
             </Border>
             
-            <TextBlock Style="{StaticResource TextBoxHeader}">TEKST</TextBlock>
-            <animation:LoadingAnimation Visibility="{Binding AnimationsEnabled}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            <Button Name="StartAnimation" Width="100" Height="20"  Content="Wygeneruj Menu" Margin="0,0,20,0" >
+            <TextBlock Style="{StaticResource TextBoxHeader}" Text="{Binding ReadyText}"></TextBlock>
+            <Button Name="StartAnimation" Width="100" Height="20"  Content="Uruchom" Margin="0,0,20,0" >
                 <int:Interaction.Triggers>
                     <int:EventTrigger EventName="Click">
                         <int:InvokeCommandAction Command="{Binding buttonStartAnimationsCommand}" 
