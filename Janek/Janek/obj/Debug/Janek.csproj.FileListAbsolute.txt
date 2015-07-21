@@ -58,3 +58,4 @@ C:\Users\Mariusz\Documents\GitHub\WPF_Test\Janek\Janek\obj\Debug\Animation\Loadi
 C:\Users\Mariusz\Documents\GitHub\WPF_Test\Janek\Janek\obj\Debug\Animation\LoadingAnimation.baml
 C:\Users\Mariusz\Documents\GitHub\WPF_Test\Janek\Janek\obj\Debug\Animation\LoadingWindow.g.cs
 C:\Users\Mariusz\Documents\GitHub\WPF_Test\Janek\Janek\obj\Debug\Animation\LoadingWindow.baml
+C:\Users\Mariusz\Documents\GitHub\WPF_Test\Janek\Janek\obj\Debug\Janek.View.TEst.resources

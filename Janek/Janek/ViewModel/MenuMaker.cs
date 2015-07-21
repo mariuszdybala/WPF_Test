@@ -175,7 +175,17 @@ namespace Janek
 
         public void Start()
         {
-            splash.StartMethod(this, MainThreadMethod);
+            int p = ProgressManager.StartProgressManager();
+            try 
+            {
+                MainThreadMethod();
+            }
+            catch
+            { }
+            finally
+            {
+                ProgressManager.StopExecuting(p);
+            }
         }
 
       

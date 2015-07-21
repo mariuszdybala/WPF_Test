@@ -56,6 +56,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="View\TEst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TEst.Designer.cs">
+      <DependentUpon>TEst.cs</DependentUpon>
+    </Compile>
     <Page Include="Animation\Block.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -87,6 +93,7 @@
     </Compile>
     <Compile Include="IEnabled.cs" />
     <Compile Include="Model\BoolStringClass.cs" />
+    <Compile Include="Tools\ProgressManager.cs" />
     <Compile Include="Tools\SplashScreenWindow.cs" />
     <Compile Include="Tools\HeightConverter.cs" />
     <Compile Include="Tools\MyCommand.cs" />
@@ -118,6 +125,9 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TEst.resx">
+      <DependentUpon>TEst.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

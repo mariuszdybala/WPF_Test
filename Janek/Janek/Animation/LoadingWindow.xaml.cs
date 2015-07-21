@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -17,16 +18,19 @@ namespace Janek.Animation
     /// <summary>
     /// Interaction logic for LoadingWindow.xaml
     /// </summary>
-    public partial class LoadingWindow : Window, IDisposable
+    public partial class LoadingWindow : Window
     {
         public LoadingWindow()
         {
             InitializeComponent();
+            Thread thread = Thread.CurrentThread;
         }
 
-        public void Dispose()
+        public void CloseWindow()
         {
-            this.Dispose();
+            this.Close();
         }
+
+
     }
 }

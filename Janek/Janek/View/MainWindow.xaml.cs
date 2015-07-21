@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Janek.Animation;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,12 +19,18 @@ namespace Janek
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : Window, IDisposable
     {
         public MainWindow()
         {
             InitializeComponent();
             this.DataContext = new MenuMaker();
+        }
+
+        private void StartLoadingBar_Click(object sender, RoutedEventArgs e)
+        {
+            LoadingWindow window = new LoadingWindow();
+            window.ShowDialog();
         }
 
 
@@ -34,5 +41,10 @@ namespace Janek
         //    MenuMaker menuMaker = new MenuMaker();
         //    menuMaker.UpdateMenu();
         //}
+
+        public void Dispose()
+        {
+            this.Dispose();
+        }
     }
 }
